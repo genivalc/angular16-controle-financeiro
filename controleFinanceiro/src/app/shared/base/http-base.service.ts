@@ -20,19 +20,19 @@ export class HttpBaseService {
 
   }
 
-  public httpGet(endpoint: String): Observable<any> {
+  protected httpGet(endpoint: String): Observable<any> {
     return this.httpClient.get(`${this.apiBase}${endpoint}`)
   }
 
-  public httpPost(endpoint: String, dados: any): Observable<any> {
+  protected httpPost(endpoint: String, dados: any): Observable<any> {
     return this.httpClient.post(`${this.apiBase}${endpoint}`, dados)
   }
 
-  public httpPut(endpoint: String, dados: any): Observable<any> {
+  protected httpPut(endpoint: String, dados: any): Observable<any> {
     return this.httpClient.put(`${this.apiBase}${endpoint}`, dados)
   }
 
-  public httpDelete(endpoint: String): Observable<any> {
+  protected httpDelete(endpoint: String): Observable<any> {
     return this.httpClient.delete(`${this.apiBase}${endpoint}`)
   }
 }
