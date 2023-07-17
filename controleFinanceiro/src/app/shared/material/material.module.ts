@@ -1,18 +1,37 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     MatCardModule,
-    MatSelectModule
+    MatSelectModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatInputModule
   ],
   exports: [
     MatCardModule,
-    MatSelectModule
-  ]
+    MatSelectModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatInputModule
+  ],
 })
-export class MaterialModule { }
+export class MaterialModule {}
