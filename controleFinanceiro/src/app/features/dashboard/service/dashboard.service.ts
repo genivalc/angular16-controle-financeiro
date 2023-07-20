@@ -13,7 +13,9 @@ export class DashboardService extends HttpBaseService{
     super(injector);
    }
 
-   getEntradas(): Observable<any>{
-    return this.httpGet(this.endpoint)
+   getEntradas(payload?: any): Observable<any>{
+    const params = payload? `?q=${payload.mes}/${payload.ano}` :  ''
+
+    return this.httpGet(`${this.endpoint}${params}`)
    }
 }

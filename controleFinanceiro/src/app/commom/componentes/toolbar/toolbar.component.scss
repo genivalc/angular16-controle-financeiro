@@ -1,0 +1,27 @@
+
+.space{
+  flex: 1 1 auto;
+}
+
+.menu-item {
+  a {
+    text-decoration: none;
+    margin: 5px;
+  }
+
+}
+.active{
+  color: rgb(255, 173, 255);
+}
+
+a:hover {
+  color: rgb(164, 164, 164);
+}
+
+a:active {
+  color: rgb(236, 233, 236);
+}
+
+a{
+  color: whitesmoke;
+}

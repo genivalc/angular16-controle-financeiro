@@ -1,0 +1,8 @@
+<mat-toolbar >
+  <span>Controle Financeiro</span>
+  <span class="space"></span>
+
+  <div class="menu-item" *ngFor="let menu of menus">
+    <a [routerLink]="menu.rota" routerLinkActive="active">{{menu.descricao}}</a>
+  </div>
+</mat-toolbar>

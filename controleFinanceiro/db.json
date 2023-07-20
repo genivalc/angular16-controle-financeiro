@@ -28,13 +28,13 @@
   ],
   "entradas": [
     {
-      "id": 1,
       "nome": "Gás de Cozinha",
       "categoriaId": 1,
+      "data": "03/07/2023",
       "pago": true,
-      "data": "14/03/2023",
+      "tipo": "despesa",
       "valor": "70,80",
-      "tipo": "despesa"
+      "id": 1
     },
     {
       "id": 2,
@@ -152,6 +152,33 @@
       "data": "28/04/2023",
       "valor": "15,00",
       "tipo": "despesa"
+    },
+    {
+      "nome": "Video game",
+      "categoriaId": "",
+      "data": "11/07/2023",
+      "pago": true,
+      "tipo": "receita",
+      "valor": "124",
+      "id": 45
+    },
+    {
+      "nome": "casasss",
+      "categoriaId": 4,
+      "data": "Invalid Date",
+      "pago": true,
+      "tipo": "receita",
+      "valor": "333",
+      "id": 46
+    },
+    {
+      "nome": "casasss",
+      "categoriaId": 2,
+      "data": "20/07/2023",
+      "pago": false,
+      "tipo": "despesa",
+      "valor": "333",
+      "id": 47
     }
   ]
 }

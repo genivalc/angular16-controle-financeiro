@@ -1,21 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { DashboardRoutingModule } from './dashboard-routing.module';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CategoriasRoutingModule } from './categorias-routing.module';
+
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormularioComponent } from './components/formulario/formulario.component';
+import { ListComponent } from './components/list/list.component';
 
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    ListComponent,
+    FormularioComponent
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule,
+    CategoriasRoutingModule,
     MaterialModule,
     ReactiveFormsModule
   ]
 })
-export class DashboardModule { }
+export class CategoriasModule { }
