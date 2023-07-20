@@ -27,6 +27,8 @@ export class FormularioComponent implements OnInit {
   isNewForm: boolean = false;
   entrada!: Entrada;
 
+  categorias$ =  this.categoriaService.getCategoria()
+
   constructor(
     private readonly categoriaService: CategoriasService,
     private readonly entradasService: EntradasService,
@@ -38,7 +40,7 @@ export class FormularioComponent implements OnInit {
   ngOnInit(): void {
     this.rota = this.activatedRoute.snapshot.url[0].path;
     this.criarFormulario();
-    this.buscarCategorias()
+
 
     if (this.rota === 'editar') {
       this.id = this.activatedRoute.snapshot.url[1].path;
@@ -70,13 +72,7 @@ export class FormularioComponent implements OnInit {
       });
   }
 
-  buscarCategorias() {
-    this.categoriaService
-      .getCategoria()
-      .subscribe((categorias: Categoria[]) => {
-        this.categorias = categorias;
-      });
-  }
+
 
   criarFormulario() {
     this.formEntradas = this.FormBuilder.group({
