@@ -4,9 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ToolbarComponent } from './commom/componentes/toolbar/toolbar.component'
 import { MaterialModule } from './shared/material/material.module';
+import { AuthGuard } from './commom/auth.guard';
+import { AuthInterceptor } from './commom/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { MaterialModule } from './shared/material/material.module';
     MaterialModule
   ],
   providers: [
+    AuthGuard,
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
 ],
   bootstrap: [AppComponent]
 })
